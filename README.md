@@ -29,7 +29,7 @@ Manually:
 Menu:
 
 1. Open up the Syntax Menu (`View` -> `Syntax`)
-2. Click `Cubescipt`.
+2. Click `Cubescipt`
 
 Command:
 
@@ -37,15 +37,10 @@ Command:
 
 All *.cfg files:
 
-1. Open `User` folder of Sublime Text (in Sublime Text, find `Browse Packages...` menu item to open parent folder).
-2. Create a file `Cubescript.sublime-settings` with the following contents:
-
-```json
-{
-    // change default syntax highlight for *.cfg files
-    "extensions": [ "cfg" ]
-}
-```
+1. Open any *.cfg file
+2. Open up the Syntax Menu (`View` -> `Syntax`)
+3. Select `Open all with current extension as...`
+4. Click `Cubescript`
 
 
 ### Contributing
