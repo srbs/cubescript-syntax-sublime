@@ -45,7 +45,16 @@ All *.cfg files:
 
 ### Contributing
 
-See the [TextMate online manual](textmate_manual) if you are new to bundle development.
+Development for this project is primarily done in [cubescript-syntax-tmbundle](textmate-repo) project. My [converter](converter-repo) is used to convert between the two structures using this `build.xml` in the parent folder of all three projects:
+
+```xml
+<project basedir=".">
+    <include file="textmate-to-sublime-converter/tm2subl.xml" />
+    <tm2subl destdir="cubescript-syntax-sublime" srcdir="cubescript-syntax-tmbundle" />
+</project>
+```
+
+Please see the respective [Contributing](textmate-repo-contributing) section for contributing information.
 
 This project uses the Zlib license. See the License section for details.
 
@@ -79,4 +88,8 @@ This project uses the Zlib license. See the License section for details.
 [sublime3]: http://www.sublimetext.com/3 "Sublime Text 3"
 
 [package_control]: http://wbond.net/sublime_packages/package_control "Package Control"
-[textmate_manual]: http://manual.macromates.com/en/ "TextMate Online Manual"
+
+[textmate-repo]: https://github.com/srbs/cubescript-syntax-tmbundle
+[converter-repo]: https://github.com/srbs/textmate-to-sublime-converter
+
+[textmate-repo-contributing]: https://github.com/srbs/cubescript-syntax-tmbundle#contributing "Contributing"
