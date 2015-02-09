@@ -23,14 +23,28 @@
 	</array>
 	<key>repository</key>
 	<dict>
-		<key>block</key>
+		<key>blocks</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#brackets</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#parens</string>
+				</dict>
+			</array>
+		</dict>
+		<key>brackets</key>
 		<dict>
 			<key>begin</key>
 			<string>\[</string>
 			<key>end</key>
 			<string>\]</string>
 			<key>name</key>
-			<string>meta.block.cubescript</string>
+			<string>meta.brackets.cubescript</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -61,11 +75,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#block</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#parens</string>
+					<string>#blocks</string>
 				</dict>
 				<dict>
 					<key>include</key>
