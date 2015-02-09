@@ -1,6 +1,6 @@
 <snippet>
-	<description>guinoautotab</description>
 	<content><![CDATA[guinoautotab [$0]]]></content>
-	<tabTrigger>gnat</tabTrigger>
+	<description>guinoautotab</description>
 	<scope>source.cubescript</scope>
+	<tabTrigger>gnat</tabTrigger>
 </snippet>

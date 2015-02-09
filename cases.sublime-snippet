@@ -1,8 +1,8 @@
 <snippet>
-	<description>cases</description>
 	<content><![CDATA[cases ${1:\$str} "$2" [
 	$0
 ]]]></content>
-	<tabTrigger>cs</tabTrigger>
+	<description>cases</description>
 	<scope>source.cubescript</scope>
+	<tabTrigger>cs</tabTrigger>
 </snippet>

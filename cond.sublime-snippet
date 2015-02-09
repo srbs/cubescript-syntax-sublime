@@ -1,8 +1,8 @@
 <snippet>
-	<description>cond</description>
 	<content><![CDATA[cond ${1:\$cond} [
 	$0
 ]]]></content>
-	<tabTrigger>co</tabTrigger>
+	<description>cond</description>
 	<scope>source.cubescript</scope>
+	<tabTrigger>co</tabTrigger>
 </snippet>

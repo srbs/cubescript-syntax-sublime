@@ -1,6 +1,6 @@
 <snippet>
-	<description>clearsleep</description>
 	<content><![CDATA[clearsleep]]></content>
-	<tabTrigger>csl</tabTrigger>
+	<description>clearsleep</description>
 	<scope>source.cubescript</scope>
+	<tabTrigger>csl</tabTrigger>
 </snippet>

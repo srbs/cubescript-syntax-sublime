@@ -1,8 +1,8 @@
 <snippet>
-	<description>sleep</description>
 	<content><![CDATA[sleep $1 [
 	$0
 ]]]></content>
-	<tabTrigger>sl</tabTrigger>
+	<description>sleep</description>
 	<scope>source.cubescript</scope>
+	<tabTrigger>sl</tabTrigger>
 </snippet>
