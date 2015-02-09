@@ -250,15 +250,27 @@
 					<array>
 						<dict>
 							<key>match</key>
-							<string>\^.</string>
+							<string>\^[fnt"\^]</string>
 							<key>name</key>
 							<string>constant.character.escape.cubescript</string>
 						</dict>
 						<dict>
 							<key>match</key>
-							<string>%.</string>
+							<string>\^(.|\n)</string>
+							<key>name</key>
+							<string>invalid.illegal.escape.unknown.cubescript</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>%[1-9%]</string>
 							<key>name</key>
 							<string>constant.other.placeholder.cubescript</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\n</string>
+							<key>name</key>
+							<string>invalid.illegal.string.newline.cubescript</string>
 						</dict>
 					</array>
 				</dict>
