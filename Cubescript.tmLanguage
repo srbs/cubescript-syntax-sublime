@@ -197,9 +197,50 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(\b0[xX][0-9a-fA-F]+\b)|[+-]?((\b[0-9]+)?\.)?\b[0-9]+([eE][+-]?[0-9]+)?\b</string>
+					<string>\b0[xX][\h]+\b(?!\.)</string>
 					<key>name</key>
-					<string>constant.numeric.cubescript</string>
+					<string>constant.numeric.hex.cubescript</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b0[0-7]+\b</string>
+					<key>name</key>
+					<string>constant.numeric.octal.cubescript</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b[0-9]+\b(?!\.)</string>
+					<key>name</key>
+					<string>constant.numeric.integer.cubescript</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+						(?&lt;!\w)                    # Ensure word boundary
+						0[xX]                      # Start literal
+						(
+							\.[\h]+                # Allow starting .
+							| [\h]+(\.[\h]*)?      # Allow leading digits &amp; optional suffix
+						)
+						([pP][+-]?[0-9]+)?         # Exponent
+						(?!\w)                     # Ensure word boundry
+					</string>
+					<key>name</key>
+					<string>constant.numeric.hex-float.cubescript</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+						(?&lt;!\w)                    # Ensure word boundary
+						(
+							\.[0-9]+               # Allow starting .
+							| [0-9]+(\.[0-9]*)?    # Allow leading digits &amp; optional suffix
+						)
+						([eE][+-]?[0-9]+)?         # Exponent
+						(?!\w)                     # Ensure word boundry
+					</string>
+					<key>name</key>
+					<string>constant.numeric.float.cubescript</string>
 				</dict>
 			</array>
 		</dict>
