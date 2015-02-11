@@ -297,7 +297,7 @@
 						</dict>
 						<dict>
 							<key>match</key>
-							<string>\^(.|\n)</string>
+							<string>\^(.|\n|\r)</string>
 							<key>name</key>
 							<string>invalid.illegal.escape.unknown.cubescript</string>
 						</dict>
@@ -309,7 +309,7 @@
 						</dict>
 						<dict>
 							<key>match</key>
-							<string>\n</string>
+							<string>[\n\r]</string>
 							<key>name</key>
 							<string>invalid.illegal.string.newline.cubescript</string>
 						</dict>
