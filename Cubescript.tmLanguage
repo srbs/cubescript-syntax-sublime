@@ -191,6 +191,18 @@
 				</dict>
 			</array>
 		</dict>
+		<key>language_vars</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(\@+|\$)(arg[1-9][0-9]*|numargs|guirollovername|guirolloveraction|guirolloverimgpath|guirolloverimgaction|commandbuf)</string>
+					<key>name</key>
+					<string>variable.language.cubescript</string>
+				</dict>
+			</array>
+		</dict>
 		<key>number</key>
 		<dict>
 			<key>patterns</key>
@@ -346,6 +358,10 @@
 				<dict>
 					<key>include</key>
 					<string>#number</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#language_vars</string>
 				</dict>
 				<dict>
 					<key>include</key>
