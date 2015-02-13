@@ -39,17 +39,22 @@
 		</dict>
 		<key>brackets</key>
 		<dict>
-			<key>begin</key>
-			<string>\[</string>
-			<key>end</key>
-			<string>\]</string>
-			<key>name</key>
-			<string>meta.brackets.cubescript</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>include</key>
-					<string>#code</string>
+					<key>begin</key>
+					<string>\[</string>
+					<key>end</key>
+					<string>\]</string>
+					<key>name</key>
+					<string>meta.brackets.cubescript</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#code</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>
@@ -80,6 +85,10 @@
 				<dict>
 					<key>include</key>
 					<string>#functions</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#invalid</string>
 				</dict>
 			</array>
 		</dict>
@@ -140,6 +149,18 @@
 							<string>#code</string>
 						</dict>
 					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>invalid</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>[\)\]]</string>
+					<key>name</key>
+					<string>invalid.illegal.character.cubescript</string>
 				</dict>
 			</array>
 		</dict>
@@ -258,17 +279,22 @@
 		</dict>
 		<key>parens</key>
 		<dict>
-			<key>begin</key>
-			<string>\(</string>
-			<key>end</key>
-			<string>\)</string>
-			<key>name</key>
-			<string>meta.parens.cubescript</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>include</key>
-					<string>#code</string>
+					<key>begin</key>
+					<string>\(</string>
+					<key>end</key>
+					<string>\)</string>
+					<key>name</key>
+					<string>meta.parens.cubescript</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#code</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>
