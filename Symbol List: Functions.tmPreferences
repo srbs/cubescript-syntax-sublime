@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Symbol List: Methods</string>
+	<string>Symbol List: Functions</string>
 	<key>scope</key>
 	<string>source.cubescript entity.name.function</string>
 	<key>settings</key>
@@ -12,8 +12,7 @@
 		<integer>1</integer>
 		<key>symbolTransformation</key>
 		<string>
-		s/\s{2,}/ /g;
-		s/.*/$0/g;
+		s/.*/$0 (alias)/g;
 	</string>
 	</dict>
 	<key>uuid</key>

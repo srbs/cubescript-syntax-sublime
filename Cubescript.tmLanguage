@@ -172,32 +172,33 @@
 				<dict>
 					<key>begin</key>
 					<string>(?x)
-					^(\s*)              # `\n `
-					([^\s\(\)\[\];]*)   # the name cannot consist of (, ), [, ], ;, or whitespace
-					(?=\s+=\s+\[)       # ` = [`
+						^\s*
+						([^\s\(\)\[\];]+) # name
+						\s+(=)\s+         # assignment
+						(?=\[)            # functions must use []s
 					</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.whitespace.function.leading.cubescript</string>
+							<string>entity.name.function.cubescript</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.function.cubescript</string>
+							<string>keyword.operator.assignment.cubescript</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>(?&lt;=\])</string>
 					<key>name</key>
-					<string>meta.function.cubescript</string>
+					<string>meta.function.equals.cubescript</string>
 					<key>patterns</key>
 					<array>
 						<dict>
 							<key>include</key>
-							<string>#code</string>
+							<string>#brackets</string>
 						</dict>
 					</array>
 				</dict>
