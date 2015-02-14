@@ -31,6 +31,10 @@
 					<key>include</key>
 					<string>#binds</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#guis</string>
+				</dict>
 			</array>
 		</dict>
 		<key>binds</key>
@@ -194,6 +198,40 @@
 					<string>(?&lt;=\])</string>
 					<key>name</key>
 					<string>meta.function.equals.cubescript</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#brackets</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>guis</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>\b(newgui)\s+([^\$\@\(\[;][^\s;]*)\s+(?=\[)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.cubescript</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.gui.cubescript</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(?&lt;=\])</string>
+					<key>name</key>
+					<string>meta.function.gui.cubescript</string>
 					<key>patterns</key>
 					<array>
 						<dict>

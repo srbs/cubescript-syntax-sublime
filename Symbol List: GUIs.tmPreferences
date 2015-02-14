@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: GUIs</string>
+	<key>scope</key>
+	<string>source.cubescript entity.name.gui</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+		s/.*/$0 (gui)/g;
+	</string>
+	</dict>
+	<key>uuid</key>
+	<string>D2EE6CE0-5783-408B-8955-D3077AA464D5</string>
+</dict>
+</plist>
