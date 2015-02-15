@@ -503,10 +503,10 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(?&lt;=[ \t\n\[\]\(\)"])(\$|\@+)</string>
+					<string>(^|(?&lt;=[ \t\n\[\]\(\)"]))(\$|\@+)</string>
 					<key>beginCaptures</key>
 					<dict>
-						<key>1</key>
+						<key>2</key>
 						<dict>
 							<key>name</key>
 							<string>variable.dereference.cubescript</string>
