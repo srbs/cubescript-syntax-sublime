@@ -184,10 +184,43 @@
 				<dict>
 					<key>begin</key>
 					<string>(?x)
-						^\s*
-						([^\s\(\)\[\];]+) # name
-						\s+(=)\s+         # assignment
-						(?=\[)            # functions must use []s
+						^
+						(alias)\s+
+						([^\s"\$\@\(\)\[\];]+)
+						\s+(?=\[)
+					</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.assignment.cubescript</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.function.cubescript</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(?&lt;=\])</string>
+					<key>name</key>
+					<string>meta.definition.function.alias.cubescript</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#brackets</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(?x)
+						^
+						([^\s"\$\@\(\)\[\];]+)
+						\s+(=)\s+
+						(?=\[)
 					</string>
 					<key>beginCaptures</key>
 					<dict>
