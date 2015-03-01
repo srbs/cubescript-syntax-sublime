@@ -78,7 +78,7 @@
 						</dict>
 						<dict>
 							<key>match</key>
-							<string>\S+</string>
+							<string>[^\s\(\)\[\];]+</string>
 							<key>name</key>
 							<string>invalid.illegal.constant.key.cubescript</string>
 						</dict>
