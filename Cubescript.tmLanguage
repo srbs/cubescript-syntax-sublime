@@ -49,8 +49,8 @@
 					<key>begin</key>
 					<string>(?x)
 						\b((get)?(bind|editbind|specbind))
-						\s+
-						(?!["\$@\[\(]) # dont validate when using "str"/$var/@var/[text]/(func)
+						[ \t]+             # we dont want to invalidate the following line do we?
+						(?!["\$@\(\)\[\]]) # dont match when using "str"/$var/@var/(func)/[text]
 					</string>
 					<key>beginCaptures</key>
 					<dict>
@@ -61,7 +61,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>\s+</string>
+					<string>($|(?=//|[\s;\)\]]))</string>
 					<key>name</key>
 					<string>meta.definition.bind.cubescript</string>
 					<key>patterns</key>
@@ -78,7 +78,13 @@
 						</dict>
 						<dict>
 							<key>match</key>
-							<string>[^\s\(\)\[\];]+</string>
+							<string>[^\s/;]*</string>
+							<key>name</key>
+							<string>invalid.illegal.constant.key.cubescript</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>[^\s;]+</string>
 							<key>name</key>
 							<string>invalid.illegal.constant.key.cubescript</string>
 						</dict>
